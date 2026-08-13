@@ -1,0 +1,333 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+/* Header */
+
+.header {
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  color: white;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Main */
+
+.main-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+/* Hero */
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: #172554;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #64748b;
+}
+
+/* Cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #2563eb;
+}
+
+.description {
+  color: #64748b;
+  margin-bottom: 22px;
+}
+
+/* Upload */
+
+.upload-box {
+  height: 230px;
+
+  border: 2px dashed #93c5fd;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  background: #f8fbff;
+}
+
+.upload-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.upload-box strong {
+  font-size: 17px;
+}
+
+.upload-box span {
+  color: #64748b;
+  margin: 7px 0 15px;
+}
+
+.upload-box input {
+  display: none;
+}
+
+.upload-box button {
+  border: none;
+  background: #2563eb;
+  color: white;
+
+  padding: 11px 25px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.upload-box button:hover {
+  background: #1d4ed8;
+}
+
+/* Selected file */
+
+.selected-file {
+  margin-top: 15px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px;
+
+  background: #eff6ff;
+
+  border-radius: 8px;
+}
+
+.selected-file > span {
+  font-size: 24px;
+}
+
+.selected-file strong {
+  display: block;
+}
+
+.selected-file small {
+  color: #64748b;
+}
+
+/* Job Description */
+
+textarea {
+  width: 100%;
+
+  height: 230px;
+
+  resize: vertical;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 10px;
+
+  padding: 15px;
+
+  font-size: 15px;
+
+  font-family: Arial, sans-serif;
+
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #2563eb;
+}
+
+.character-count {
+  text-align: right;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+
+  margin-top: 8px;
+}
+
+/* Analyze */
+
+.analyze-container {
+  text-align: center;
+
+  margin: 35px 0;
+}
+
+.analyze-button {
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #4f46e5
+  );
+
+  color: white;
+
+  border: none;
+
+  padding: 14px 45px;
+
+  border-radius: 9px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+.analyze-button:hover {
+  transform: translateY(-1px);
+}
+
+/* Steps */
+
+.steps {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  padding: 25px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.step {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: flex-start;
+}
+
+.step > span {
+  min-width: 35px;
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #dbeafe;
+
+  color: #2563eb;
+
+  border-radius: 50%;
+
+  font-weight: bold;
+}
+
+.step strong {
+  font-size: 15px;
+}
+
+.step p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .header-content {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .main-container {
+    padding: 30px 15px;
+  }
+}
